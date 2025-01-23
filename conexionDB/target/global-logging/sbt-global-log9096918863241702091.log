@@ -1,0 +1,93 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\adalb\AppData\Local\Temp\idea.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\adalb\AppData\Local\Temp\idea.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.10.7 (Oracle Corporation Java 23.0.1)
+[debug] Load.defaultLoad until apply took 78.1521ms
+[debug]           Load.loadUnit: plugins took 69.6792ms
+[debug]           Load.loadUnit: defsScala took 0.3504ms
+[debug] [Loading] Scanning directory C:\Users\adalb\Downloads\repo\conexionDB\project
+[debug]             Load.loadUnit: mkEval took 5.4866ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\adalb\Downloads\repo\conexionDB\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 26.5173 ms
+[info] loading settings for project conexiondb-build from idea.sbt...
+[debug]               Load.resolveProject(conexiondb-build) took 57.1315ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id conexiondb-build, base: C:\Users\adalb\Downloads\repo\conexionDB\project, plugins: List(<none>))) took 93.1555ms
+[debug] [Loading] Done in C:\Users\adalb\Downloads\repo\conexionDB\project, returning: (conexiondb-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 3030.32ms
+[debug]           Load.loadUnit: cleanEvalClasses took 12.5998ms
+[debug]         Load.loadUnit(file:/C:/Users/adalb/Downloads/repo/conexionDB/project/, ...) took 3119.9033ms
+[debug]       Load.apply: load took 3287.1213ms
+[debug]       Load.apply: resolveProjects took 7.786ms
+[debug]       Load.apply: finalTransforms took 80.9152ms
+[debug]       Load.apply: config.delegates took 8.62ms
+[debug]       Load.apply: Def.make(settings)... took 420.8277ms
+[debug]       Load.apply: structureIndex took 106.3199ms
+[debug]       Load.apply: mkStreams took 2.4542ms
+[info] loading project definition from C:\Users\adalb\Downloads\repo\conexionDB\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 6833.3654ms
+[debug]     Load.loadUnit: defsScala took 0.0028ms
+[debug] [Loading] Scanning directory C:\Users\adalb\Downloads\repo\conexionDB
+[debug]       Load.loadUnit: mkEval took 0.2347ms
+[debug] [Loading] Found root project root w/ remaining 
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.SemanticdbPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 3.703 ms
+[info] loading settings for project root from build.sbt...
+[debug]         Load.resolveProject(root) took 28.7271ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: C:\Users\adalb\Downloads\repo\conexionDB, plugins: List(<none>))) took 33.7153ms
+[debug] [Loading] Done in C:\Users\adalb\Downloads\repo\conexionDB, returning: (root)
+[debug]     Load.loadUnit: loadedProjectsRaw took 1617.0447ms
+[debug]     Load.loadUnit: cleanEvalClasses took 19.0761ms
+[debug]   Load.loadUnit(file:/C:/Users/adalb/Downloads/repo/conexionDB/, ...) took 8471.1996ms
+[debug] Load.apply: load took 8486.0373ms
+[debug] Load.apply: resolveProjects took 0.2324ms
+[debug] Load.apply: finalTransforms took 49.8756ms
+[debug] Load.apply: config.delegates took 0.9134ms
+[debug] Load.apply: Def.make(settings)... took 109.3088ms
+[debug] Load.apply: structureIndex took 31.8779ms
+[debug] Load.apply: mkStreams took 0.0035ms
+[info] set current project to conexionDB (in build file:/C:/Users/adalb/Downloads/repo/conexionDB/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(idea-shell, None, None)
