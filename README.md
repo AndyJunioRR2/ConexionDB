@@ -31,3 +31,86 @@ Si bien Scala puede usar JDBC directamente, existen librerías que hacen el trab
 | Complejidad           | Simple y ligero                     | Más complejo, pero más potente           |
 | Curva de aprendizaje | Baja                                 | Media                                     |
 | Tipado               | Menos tipado (depende del mapeo)      | Fuertemente tipado                      |
+## 3. Conexión con MySQL
+### 1) Creación de base de datos
+![image](https://github.com/user-attachments/assets/187f899d-e40d-445b-9932-edb850e6cc83)
+### 2) Genere una tabla con datos de prueba
+![image](https://github.com/user-attachments/assets/c953f9e0-2f25-4720-b177-92cd845755d5)
+### 3) Código en Scala...
+* Sbt
+```scala
+ThisBuild / version := "0.1.0-SNAPSHOT"
+
+ThisBuild / scalaVersion := "3.3.4"
+
+lazy val root = (project in file("."))
+  .settings(
+    name := "conexionDB",
+    libraryDependencies ++= Seq(
+      "mysql" % "mysql-connector-java" % "8.0.33", // Driver MySQL (reemplaza con la versión más reciente si es necesario)
+      "org.slf4j" % "slf4j-simple" % "2.0.9" // Dependencia para el logging (opcional, pero recomendado)
+    )
+  )
+```
+* Codigo
+```scala
+import java.sql.{Connection, DriverManager, ResultSet}
+
+object ConexionMySQL {
+
+  val url = "jdbc:mysql://localhost:3306/prueba"
+  val username = "Andy"
+  val password = "andyjunior"
+
+  def main(args: Array[String]): Unit = {
+    var connection: Connection = null
+
+    try {
+
+      connection = DriverManager.getConnection(url, username, password)
+      println("Conexión exitosa a la base de datos.")
+
+
+      val statement = connection.createStatement()
+      val resultSet: ResultSet = statement.executeQuery("SELECT * FROM usuarios")
+
+
+      while (resultSet.next()) {
+        val id = resultSet.getInt("id")
+        val nombre = resultSet.getString("nombre")
+        val correo = resultSet.getString("correo")
+        println(s"ID: $id, Nombre: $nombre, Correo: $correo")
+      }
+
+    } catch {
+      case e: Exception =>
+        e.printStackTrace()
+    } finally {
+      if (connection != null) {
+        connection.close()
+        println("Conexión cerrada.")
+      }
+    }
+  }
+}
+```
+### 4) Resultados
+![image](https://github.com/user-attachments/assets/67a0c26e-3c7c-4074-bef4-2a55673fc7c7)
+
+### Referencias
+
+*   **JDBC API Tutorial (Oracle):** Tutorial oficial de Oracle sobre JDBC, que cubre los conceptos fundamentales y proporciona ejemplos prácticos.
+
+    [https://docs.oracle.com/javase/tutorial/jdbc/](https://docs.oracle.com/javase/tutorial/jdbc/)
+
+*   **MySQL Connector/J 8.0 (MySQL):** Documentación oficial del driver JDBC para MySQL, que incluye información sobre la instalación, configuración, compatibilidad y el uso de diferentes características.
+
+    [https://dev.mysql.com/doc/connector-j/en/](https://dev.mysql.com/doc/connector-j/en/)
+
+*   **Slick (Scala Slick):** Documentación oficial de Slick, una popular librería de Scala para acceso a bases de datos relacionales, que ofrece un DSL y capacidades de ORM.
+
+    [https://scala-slick.org/](https://scala-slick.org/)
+
+*   **SLF4j (Simple Logging Facade for Java):** Sitio web oficial de SLF4j, que explica su propósito como una fachada de logging y proporciona información sobre sus diferentes implementaciones (como slf4j-simple, logback, log4j).
+
+    [https://www.slf4j.org/](https://www.slf4j.org/)
